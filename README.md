@@ -3,7 +3,7 @@
 Assistant documentaire multimodal et agentique pour la maintenance industrielle.
 
 **Module :** IA générative multimodale — EMSI 2026
-**Équipe :** Zakaria Houdir, Anas Essadeq (`ESSADEQ-HOUDIR`)
+**Équipe :** Zakaria Houdir, Anas Essadeq, Jaber (`ESSADEQ-HOUDIR-JABER`)
 **État :** livrable 1 terminé — cadrage, corpus documentaire, architecture cible.
 
 ## Contenu du dépôt
