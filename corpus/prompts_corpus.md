@@ -2,7 +2,7 @@
 
 **Projet :** MAINTiDOC, assistant documentaire multimodal et agentique pour la maintenance
 **Livrable :** 1 — cadrage, corpus et architecture
-**Équipe :** Zakaria Houdir, Anas Essadeq (`ESSADEQ-HOUDIR`)
+**Équipe :** Zakaria Houdir, Anas Essadeq, Jaber (`ESSADEQ-HOUDIR-JABER`)
 **Version :** 1.0 — 6 novembre 2026
 
 Ce fichier documente la constitution du corpus : les prompts utilisés, l'outil et la date de
