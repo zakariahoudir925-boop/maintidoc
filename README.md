@@ -16,7 +16,7 @@ Assistant documentaire multimodal et agentique pour la maintenance industrielle.
 | `corpus/inventaire.csv` | registre du corpus : 50 lignes, 20 colonnes |
 | `corpus/prompts_corpus.md` | prompts P01 à P11, journal des corrections, analyse critique |
 | `docs/diagrammes/` | sources des figures du rapport (Mermaid et PNG) |
-| `docs/L1_MaintiDoc_ESSADEQ-HOUDIR_Rapport.pdf` | rapport du livrable 1, parties 2.1 à 2.6 puis annexes |
+| `docs/L1_MaintiDoc_ESSADEQ-HOUDIR-JABER_Rapport.pdf` | rapport du livrable 1, parties 2.1 à 2.6 puis annexes |
 
 ## Le corpus
 
