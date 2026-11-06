@@ -1,0 +1,51 @@
+%% MAINTiDOC - architecture cible (livrable 1)
+%% Rendu : https://mermaid.live ou extension Mermaid de VS Code
+flowchart TB
+  subgraph USERS["Utilisateurs"]
+    T["Technicien<br/>question + photo"]
+    R["Responsable maintenance<br/>approbation des tickets"]
+  end
+
+  UI["Interface web<br/>Streamlit : chat, photo, sources"]
+  API["API FastAPI<br/>authentification et autorisation"]
+  ORCH["Orchestrateur LangGraph<br/>etapes, boucles, interruption"]
+  RAG["Recherche documentaire<br/>texte + visuel, fusion RRF, reranking"]
+  VLM["Modele vision-langage<br/>Qwen2.5-VL-7B"]
+  MCP["Client MCP"]
+  SRV["Serveur MCP<br/>historique, tickets"]
+  CHK["Verification des references<br/>citation existante et fondee"]
+  OUT1["Reponse sourcee ou clarification"]
+  VAL["Validation humaine<br/>contenu exact du ticket"]
+  TCK["Creation du ticket via MCP<br/>jeton + idempotence"]
+
+  subgraph STOCK["Stockage"]
+    QD[("Qdrant<br/>index texte et images")]
+    PG[("PostgreSQL<br/>metadonnees et droits")]
+    MI[("MinIO<br/>fichiers d'origine")]
+  end
+
+  subgraph ING["Ingestion hors ligne"]
+    P1["PDF, photos, scans"] --> P2["PyMuPDF + OCR local"] --> P3["Decoupage<br/>passages, tableaux, figures"]
+    P3 --> P4["Embeddings BGE-M3<br/>+ encodeur image"] --> P5["Indexation"]
+  end
+
+  T --> UI
+  R --> UI
+  UI -->|CP1| API
+  API -->|CP2| ORCH
+  ORCH --> RAG
+  ORCH --> VLM
+  ORCH --> MCP
+  MCP -->|CP3| SRV
+  RAG --- QD
+  SRV --- PG
+  RAG --> CHK
+  VLM --> CHK
+  MCP --> CHK
+  CHK -->|CP4| OUT1
+  OUT1 -->|CP5| VAL
+  VAL --> TCK
+  TCK --> SRV
+  P5 --> QD
+  P5 --> MI
+  ING --- PG

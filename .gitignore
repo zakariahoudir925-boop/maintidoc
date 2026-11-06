@@ -1,0 +1,26 @@
+# Secrets et configuration locale
+.env
+.env.*
+*.env
+secrets/
+*.pem
+*.key
+
+# Environnements et caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Données locales et sorties de modèles
+data/
+models/
+runs/
+mlruns/
+*.log
+*.tmp
+
+# Système
+.DS_Store
+Thumbs.db

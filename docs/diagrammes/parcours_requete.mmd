@@ -1,0 +1,7 @@
+%% MAINTiDOC - parcours d'une requete
+flowchart LR
+  S1["1. Droits<br/>identite et groupes"] --> S2["2. Image<br/>description par le VLM"]
+  S2 --> S3["3. Recherche<br/>documents autorises"]
+  S3 --> S4["4. Historique<br/>appel MCP si besoin"]
+  S4 --> S5["5. Redaction<br/>reponse avec sources"]
+  S5 --> S6["6. Controle<br/>citations verifiees"]
