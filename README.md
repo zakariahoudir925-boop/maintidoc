@@ -16,6 +16,7 @@ Assistant documentaire multimodal et agentique pour la maintenance industrielle.
 | `corpus/inventaire.csv` | registre du corpus : 50 lignes, 20 colonnes |
 | `corpus/prompts_corpus.md` | prompts P01 à P11, journal des corrections, analyse critique |
 | `docs/diagrammes/` | sources des figures du rapport (Mermaid et PNG) |
+| `docs/L1_MaintiDoc_ESSADEQ-HOUDIR_Rapport.pdf` | rapport du livrable 1, parties 2.1 à 2.6 puis annexes |
 
 ## Le corpus
 
@@ -30,7 +31,7 @@ sans couche texte. Ces cas sont signalés dans la colonne `usage_test` de l'inve
 
 ## Livrable 1
 
-Le rapport (parties 2.1 à 2.6, 12 pages hors annexes) accompagne ce dépôt. Il fixe :
+Le rapport (parties 2.1 à 2.6, 12 pages hors annexes) est déposé dans `docs/`. Il fixe :
 
 1. le cadrage : utilisateurs, cas d'usage, objectifs vérifiables, périmètre et hors-périmètre ;
 2. le corpus : 50 éléments, inventaire, traçabilité des prompts ;
